@@ -3,30 +3,32 @@ import styled from 'styled-components';
 export const Img = styled.img`
   width:100%;
   height:100%;
+  max-height: 250px;
   object-fit: cover;
   overflow: hidden;
 `
 
 export const GridContainer = styled.section`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding-top: 3rem;
-padding-bottom: 3rem;
-place-items: center;
-column-gap: 1rem;
-row-gap: 3rem;
-@media ${(props) => props.theme.breakpoints.sm} {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  place-items: center;
+  column-gap: 1rem;
+  row-gap: 6rem;
+  grid-auto-rows: 1fr;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+  }
+`;
 export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
+  height: 100%;
   width: 400px;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
@@ -108,12 +110,10 @@ transition: 0.5s;
 }
 `;
 
-export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
-`
-export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
-`
+export const TagList = styled.p`
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  color: #d8bfbf;
+  font-size: 1.5rem;
+`;

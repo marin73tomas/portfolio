@@ -22,9 +22,7 @@ const Projects = () => (
               <TitleContent>Tech Stack</TitleContent>
               <Hr />
               <TagList>
-                {p.tags.map((t, i) => {
-                  return <Tag key={i}>{t}</Tag>;
-                })}
+                {p.tags.join(', ')}
               </TagList>
             </div>
             <UtilityList>

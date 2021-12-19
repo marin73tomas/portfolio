@@ -12,12 +12,18 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
         <SectionText>
-          Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts.
+          Hi, I'm Tomás Marin. I'm a Full-Stack developer who works mainly with a
+          variety of CMS, libraries and frameworks ReactJS, NodeJS, WordPress,
+          NextJS, Webflow, etc.
         </SectionText>
-        <Button onClick={(e) => {
-          e.preventDefault();
-          window.location.href = '/files/resume.pdf';
-        }}>My Resume</Button>
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "/files/resume.pdf";
+          }}
+        >
+          My Resume
+        </Button>
       </LeftSection>
     </Section>
   </>
